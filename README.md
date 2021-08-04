@@ -29,5 +29,5 @@ Das Programm muss:
 - [x] Erstellen der Methode: **Eingabe**
 - [x] Erstellen der Methode: **Löschen**
 - [x] Erstellen der Methode: **Ändern**
-- [ ] Erstellen der Mrthode: **Anzeigen**
+- [ ] Erstellen der Methode: **Anzeigen**
 - [ ] Erstellen der Methode: **Auflisten**  
