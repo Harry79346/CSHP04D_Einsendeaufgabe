@@ -1,0 +1,2 @@
+# CSHP04D_Einsendeaufgabe
+Lagerverwaltung
