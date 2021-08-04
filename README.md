@@ -23,11 +23,11 @@ Das Programm muss:
 ### Für die Umsetzung gelten folgende Vorgaben:
 - [x] Die Daten müssen in einer Struktur gespeichert werden
 - [x] Verwendung eines lokalen Arrays für diese Struktur innerhalb der MAIN()-Methode, keine Klassenvariable verwenden
-- [ ] Sicherstellen, dass beim Zugriff auf die Daten die Arraygrenzen nicht verlassen werden.
+- [x] Sicherstellen, dass beim Zugriff auf die Daten die Arraygrenzen nicht verlassen werden.
 - [x] Erstellen eines Auswahlmenüs in der Methode MAIN() für den Zugriff auf die einzelnen Funktionen.
 - [ ] Beim Löschen, Ändern, Anzeigen und Auflisten darf nur auf Einträge zugefriffen werden für die Daten erfasst wurde.
 - [x] Erstellen der Methode: **Eingabe**
-- [ ] Erstellen der Methode: **Löschen**
-- [ ] Erstellen der Methode: **Ändern**
+- [x] Erstellen der Methode: **Löschen**
+- [x] Erstellen der Methode: **Ändern**
 - [ ] Erstellen der Mrthode: **Anzeigen**
 - [ ] Erstellen der Methode: **Auflisten**  
