@@ -231,7 +231,7 @@ namespace CSHP04D_Einsendeaufgabe
             }
             else
             {
-                Console.WriteLine("Die von Ihnen eingegebene Nummer befindetet sich ausserhalb des gültigen Bereiches!");
+                Console.WriteLine($"Die von Ihnen eingegebene Nummer: {selectedID} befindetet sich ausserhalb des gültigen Bereiches!");
                 Console.WriteLine();
                 Console.WriteLine("Beliebige Taste drücken um fortzufahren...");
                 Console.ReadKey();
