@@ -35,18 +35,28 @@ namespace CSHP04D_Einsendeaufgabe
                 //Variable für Usereingabe:
                 int selection = 0;
 
-                //Aufrufen der Methode:
-                PrintMenu();
-                selection = Convert.ToInt32(Console.ReadLine());
-
                 //Usereingabe verarbeiten:
-                while(selection >=1 && selection <= 5)
+                while(selection !=6)
                 {
+                    Console.WriteLine("Hauptmenü");
+                    Console.WriteLine("-------------------------------------------");
+                    Console.WriteLine("\t[1] add a new box");
+                    Console.WriteLine("\t[2] delete one box");
+                    Console.WriteLine("\t[3] change box data");
+                    Console.WriteLine("\t[4] show box by ID");
+                    Console.WriteLine("\t[5] show all boxes");
+                    Console.WriteLine();
+                    Console.Write("Your selection: ");
+                    selection = Convert.ToInt32(Console.ReadLine());
+
+                    //Console.Clear();
+                    
+
                     switch (selection)
                     {
                         case 1:
                             //Methode Add
-                            
+                            Console.WriteLine("Die Methode 'add new Box' kommt bald...versprochen");
                             break;
                         case 2:
                             //Methode Delete
@@ -61,10 +71,7 @@ namespace CSHP04D_Einsendeaufgabe
                             //Methode ShowAllBoxes
                             break;
                     }
-                    Console.ReadLine();
-                    Console.Clear();
-                    PrintMenu();
-                    selection = Convert.ToInt32(Console.ReadLine());
+                    
                 }
             }
 
@@ -72,19 +79,5 @@ namespace CSHP04D_Einsendeaufgabe
             
         }
 
-
-
-        public static void PrintMenu()
-        {
-            Console.WriteLine("Hauptmenü");
-            Console.WriteLine("-------------------------------------------");
-            Console.WriteLine("\t[1] add a new box");
-            Console.WriteLine("\t[2] delete one box");
-            Console.WriteLine("\t[3] change box data");
-            Console.WriteLine("\t[4] show box by ID");
-            Console.WriteLine("\t[5] show all boxes");
-            Console.WriteLine();
-            Console.Write("Your selection: ");
-        }
     }
 }
