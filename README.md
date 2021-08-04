@@ -21,10 +21,10 @@ Das Programm muss:
 *Beim Löschen,Ändern und Anzeigen soll der Zugriff auf die Daten der Kiste über die Nummer der Kiste erfolgen*
 
 ### Für die Umsetzung gelten folgende Vorgaben:
-- [ ] Die Daten müssen in einer Struktur gespeichert werden
-- [ ] Verwendung eines lokalen Arrays für diese Struktur innerhalb der MAIN()-Methode, keine Klassenvariable verwenden
+- [x] Die Daten müssen in einer Struktur gespeichert werden
+- [x] Verwendung eines lokalen Arrays für diese Struktur innerhalb der MAIN()-Methode, keine Klassenvariable verwenden
 - [ ] Sicherstellen, dass beim Zugriff auf die Daten die Arraygrenzen nicht verlassen werden.
-- [ ] Erstellen eines Auswahlmenüs in der Methode MAIN() für den Zugriff auf die einzelnen Funktionen.
+- [x] Erstellen eines Auswahlmenüs in der Methode MAIN() für den Zugriff auf die einzelnen Funktionen.
 - [ ] Beim Löschen, Ändern, Anzeigen und Auflisten darf nur auf Einträge zugefriffen werden für die Daten erfasst wurde.
 - [ ] Erstellen der Methode: **Eingabe**
 - [ ] Erstellen der Methode: **Löschen**
