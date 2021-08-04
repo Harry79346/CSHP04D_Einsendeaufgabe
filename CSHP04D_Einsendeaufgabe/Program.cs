@@ -18,13 +18,14 @@ namespace CSHP04D_Einsendeaufgabe
             public int Laenge;
             public int Breite;
             public int Hoehe;
+            public int Volumen;
             public bool isActiv;
 
         }
         static void Main(string[] args)
         {
             //Lokales Array mit der Länge 75:
-            Box[] lager = new Box[10];
+            Box[] lager = new Box[75];
 
             //Array vorbereiten:
             for (int i = 0; i < lager.Length; i++)
@@ -56,7 +57,7 @@ namespace CSHP04D_Einsendeaufgabe
                     {
                         case 1:
                             //Methode Add
-                            Console.WriteLine("Die Methode 'add new Box' kommt bald...versprochen");
+                            AddBox(lager);
                             break;
                         case 2:
                             //Methode Delete
@@ -77,6 +78,56 @@ namespace CSHP04D_Einsendeaufgabe
 
             
             
+        }
+
+        //die Methode zum Einlesen einer neuen Kiste
+        static void AddBox(Box[] abox)
+        {
+            //User informieren:
+            Console.WriteLine("---------Eine neue Kiste anlegen--------");
+            int selectedID;
+            int index;
+            Console.Write("Bitte geben Sie eine Box-Nummer zwischen 1 und 75 ein: ");
+            selectedID = Convert.ToInt32(Console.ReadLine());
+
+            //Arraybereich überwachen:
+            if(selectedID >=1 && selectedID <= 75)
+            {
+                index = selectedID - 1;
+                if (abox[index].isActiv == false)
+                {
+                    //Daten für die neue Box erfassen:
+                    Console.Write("Bitte geben Sie die Länge der Box ein: ");
+                    abox[index].Laenge = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("Bitte geben Sie die Breite der Box ein: ");
+                    abox[index].Breite = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("Bitte geben Sie die Höhe der Box ein: ");
+                    abox[index].Hoehe = Convert.ToInt32(Console.ReadLine());
+                    //Volumen berechnen und Box aktivieren:
+                    abox[index].Volumen = abox[index].Laenge * abox[index].Breite * abox[index].Hoehe;
+                    abox[index].isActiv = true;
+
+                    //Ergebnis ausgeben:
+                    Console.WriteLine("------------------------------");
+                    Console.WriteLine("Folgende Daten wurden erfasst:");
+                    Console.WriteLine($"Länge:   {abox[index].Laenge}");
+                    Console.WriteLine($"Breite:  {abox[index].Breite}");
+                    Console.WriteLine($"Höhe:    {abox[index].Hoehe}");
+                    Console.WriteLine($"Volumen: {abox[index].Volumen}");
+                    Console.WriteLine($"Aktiv:   {abox[index].isActiv}");
+                    Console.WriteLine("------------------------------");
+                    Console.WriteLine($"Die Daten für die Box-ID: {selectedID} wurde erfolgreich gespeichert.");
+                }
+                else
+                {
+                    Console.WriteLine($"Die von Ihnen eingegebne Box-ID: {selectedID} ist bereits vergeben!");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Die von Ihnen eingegebene Nummer befindetet sich ausserhalb des gültigen Bereiches!");
+            }
+
         }
 
     }
