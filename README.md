@@ -26,7 +26,7 @@ Das Programm muss:
 - [ ] Sicherstellen, dass beim Zugriff auf die Daten die Arraygrenzen nicht verlassen werden.
 - [x] Erstellen eines Auswahlmenüs in der Methode MAIN() für den Zugriff auf die einzelnen Funktionen.
 - [ ] Beim Löschen, Ändern, Anzeigen und Auflisten darf nur auf Einträge zugefriffen werden für die Daten erfasst wurde.
-- [ ] Erstellen der Methode: **Eingabe**
+- [x] Erstellen der Methode: **Eingabe**
 - [ ] Erstellen der Methode: **Löschen**
 - [ ] Erstellen der Methode: **Ändern**
 - [ ] Erstellen der Mrthode: **Anzeigen**
