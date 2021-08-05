@@ -69,9 +69,11 @@ namespace CSHP04D_Einsendeaufgabe
                             break;
                         case 4:
                             //Methode ShowBox
+                            ShowOneBox(lager);
                             break;
                         case 5:
                             //Methode ShowAllBoxes
+                            ShowAllBoxes(lager);
                             break;
                     }
                     
@@ -80,6 +82,68 @@ namespace CSHP04D_Einsendeaufgabe
 
             
             
+        }
+        //Die Methode zum Anzeigen aller aktiven Boxen
+        static void ShowAllBoxes(Box[] abox)
+        {
+            //User informieren:
+            Console.WriteLine("---------Alle aktiven Boxen anzeigen----------");
+
+            foreach(Box box in abox)
+            {
+                if (box.isActiv == true)
+                {
+                    Console.WriteLine("ID\tLänge\tBreite\tHöhe\tVolumen");
+                    Console.WriteLine($"{box.BoxID}\t{box.Laenge}\t{box.Breite}\t{box.Hoehe}\t{box.Volumen}");
+                }
+            }
+            Console.WriteLine("----------Ende der Auflistung----------");
+            Console.WriteLine();
+            Console.WriteLine("Beliebige Taste drücken um fortzufahren...");
+            Console.ReadKey();
+
+        }
+        //Die Methode zum Anzeigen einer spzifischen Box
+        static void ShowOneBox(Box[] abox)
+        {
+            //User informieren:
+            Console.WriteLine();
+            Console.WriteLine("----------Eine Box anzeigen----------");
+            //Methodenvariablen:
+            int selectedID;
+            int index;
+            Console.Write("Bitte geben Sie eine Box-Nummer zwischen 1 und 75 ein: ");
+            selectedID = Convert.ToInt32(Console.ReadLine());
+
+            //Arraybereich überwachen:
+            if (selectedID >= 1 && selectedID <= 75)
+            {
+                index = selectedID - 1;
+                if (abox[index].isActiv == true)
+                {
+                    Console.WriteLine("ID\tLänge\tBreite\tHöhe\tVolumen\t");
+                    Console.WriteLine($"{abox[index].BoxID}\t{abox[index].Laenge}\t{abox[index].Breite}\t{abox[index].Hoehe}\t{abox[index].Volumen}");
+                    Console.WriteLine();
+                    Console.WriteLine("Beliebige Taste drücken um fortzufahren...");
+                    Console.ReadKey();
+
+                }
+                else
+                {
+                    Console.WriteLine();
+                    Console.WriteLine($"Die Box mit der ID: {selectedID} existiert nicht!");
+                    Console.WriteLine();
+                    Console.WriteLine("Beliebige Taste drücken um fortzufahren...");
+                    Console.ReadKey();
+                }
+            }
+            else
+            {
+                Console.WriteLine($"Die von Ihnen eingegebene Nummer: {selectedID} befindetet sich ausserhalb des gültigen Bereiches!");
+                Console.WriteLine();
+                Console.WriteLine("Beliebige Taste drücken um fortzufahren...");
+                Console.ReadKey();
+            }
         }
         //Die Methode zum Ändern der Daten einer Box
         static void ChangeBox(Box[] abox)
@@ -205,18 +269,20 @@ namespace CSHP04D_Einsendeaufgabe
                     //Volumen berechnen und Box aktivieren:
                     abox[index].Volumen = abox[index].Laenge * abox[index].Breite * abox[index].Hoehe;
                     abox[index].isActiv = true;
+                    abox[index].BoxID = selectedID;
 
                     //Ergebnis ausgeben:
                     Console.WriteLine();
-                    Console.WriteLine("------------------------------");
-                    Console.WriteLine("Folgende Daten wurden erfasst:");
+                    Console.WriteLine("-----------------------------------");
+                    Console.WriteLine("Die Folgenden Daten wurden erfasst:");
+                    Console.WriteLine($"ID:      {abox[index].BoxID}");
                     Console.WriteLine($"Länge:   {abox[index].Laenge}");
                     Console.WriteLine($"Breite:  {abox[index].Breite}");
                     Console.WriteLine($"Höhe:    {abox[index].Hoehe}");
                     Console.WriteLine($"Volumen: {abox[index].Volumen}");
                     Console.WriteLine($"Aktiv:   {abox[index].isActiv}");
-                    Console.WriteLine("------------------------------");
-                    Console.WriteLine($"Die Daten für die Box-ID: {selectedID} wurde erfolgreich gespeichert.");
+                    Console.WriteLine("-----------------------------------");
+                    Console.WriteLine("Die Daten wurden erfolgreich gespeichert.");
                     Console.WriteLine();
                     Console.WriteLine("Beliebige Taste drücken um fortzufahren...");
                     Console.ReadKey();
