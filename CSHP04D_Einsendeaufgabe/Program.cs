@@ -42,13 +42,13 @@ namespace CSHP04D_Einsendeaufgabe
                     Console.Clear();
                     Console.WriteLine("Hauptmenü");
                     Console.WriteLine("-------------------------------------------");
-                    Console.WriteLine("\t[1] add a new box");
-                    Console.WriteLine("\t[2] delete one box");
-                    Console.WriteLine("\t[3] change box data");
-                    Console.WriteLine("\t[4] show box by ID");
-                    Console.WriteLine("\t[5] show all boxes");
+                    Console.WriteLine("\t[1] Neue Box erfassen");
+                    Console.WriteLine("\t[2] Box löschen");
+                    Console.WriteLine("\t[3] Boxdaten ändern");
+                    Console.WriteLine("\t[4] Eine Box suchen");
+                    Console.WriteLine("\t[5] Alle Boxen anzeigen");
                     Console.WriteLine();
-                    Console.Write("Your selection: ");
+                    Console.Write("Bitte Funktion [1-5] eingeben: ");
                     selection = Convert.ToInt32(Console.ReadLine());
 
                     
@@ -87,17 +87,17 @@ namespace CSHP04D_Einsendeaufgabe
         static void ShowAllBoxes(Box[] abox)
         {
             //User informieren:
+            Console.WriteLine();
             Console.WriteLine("---------Alle aktiven Boxen anzeigen----------");
-
-            foreach(Box box in abox)
+            Console.WriteLine("ID\tLänge\tBreite\tHöhe\tVolumen");
+            foreach (Box box in abox)
             {
                 if (box.isActiv == true)
                 {
-                    Console.WriteLine("ID\tLänge\tBreite\tHöhe\tVolumen");
                     Console.WriteLine($"{box.BoxID}\t{box.Laenge}\t{box.Breite}\t{box.Hoehe}\t{box.Volumen}");
                 }
             }
-            Console.WriteLine("----------Ende der Auflistung----------");
+            Console.WriteLine("----------Ende der Auflistung-----------------");
             Console.WriteLine();
             Console.WriteLine("Beliebige Taste drücken um fortzufahren...");
             Console.ReadKey();
@@ -112,7 +112,7 @@ namespace CSHP04D_Einsendeaufgabe
             //Methodenvariablen:
             int selectedID;
             int index;
-            Console.Write("Bitte geben Sie eine Box-Nummer zwischen 1 und 75 ein: ");
+            Console.Write("Bitte geben Sie eine Box-ID zwischen 1 und 75 ein: ");
             selectedID = Convert.ToInt32(Console.ReadLine());
 
             //Arraybereich überwachen:
@@ -154,7 +154,7 @@ namespace CSHP04D_Einsendeaufgabe
             //Methodenvariablen:
             int selectedID;
             int index;
-            Console.Write("Bitte geben Sie eine Box-Nummer zwischen 1 und 75 ein: ");
+            Console.Write("Bitte geben Sie eine Box-ID zwischen 1 und 75 ein: ");
             selectedID = Convert.ToInt32(Console.ReadLine());
 
             //Arraybereich überwachen:
@@ -199,11 +199,11 @@ namespace CSHP04D_Einsendeaufgabe
         {
             //User informieren:
             Console.WriteLine();
-            Console.WriteLine("----------Eine Kiste löschen----------");
+            Console.WriteLine("----------Eine Box löschen----------");
             //Methodenvariablen:
             int selectedID;
             int index;
-            Console.Write("Bitte geben Sie eine Box-Nummer zwischen 1 und 75 ein: ");
+            Console.Write("Bitte geben Sie eine Box-ID zwischen 1 und 75 ein: ");
             selectedID = Convert.ToInt32(Console.ReadLine());
 
             //Arraybereich überwachen:
@@ -245,7 +245,7 @@ namespace CSHP04D_Einsendeaufgabe
         {
             //User informieren:
             Console.WriteLine();
-            Console.WriteLine("---------Eine neue Kiste anlegen--------");
+            Console.WriteLine("---------Eine neue Box anlegen--------");
             Console.WriteLine();
             int selectedID;
             int index;
@@ -273,15 +273,6 @@ namespace CSHP04D_Einsendeaufgabe
 
                     //Ergebnis ausgeben:
                     Console.WriteLine();
-                    Console.WriteLine("-----------------------------------");
-                    Console.WriteLine("Die Folgenden Daten wurden erfasst:");
-                    Console.WriteLine($"ID:      {abox[index].BoxID}");
-                    Console.WriteLine($"Länge:   {abox[index].Laenge}");
-                    Console.WriteLine($"Breite:  {abox[index].Breite}");
-                    Console.WriteLine($"Höhe:    {abox[index].Hoehe}");
-                    Console.WriteLine($"Volumen: {abox[index].Volumen}");
-                    Console.WriteLine($"Aktiv:   {abox[index].isActiv}");
-                    Console.WriteLine("-----------------------------------");
                     Console.WriteLine("Die Daten wurden erfolgreich gespeichert.");
                     Console.WriteLine();
                     Console.WriteLine("Beliebige Taste drücken um fortzufahren...");
