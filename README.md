@@ -25,9 +25,9 @@ Das Programm muss:
 - [x] Verwendung eines lokalen Arrays für diese Struktur innerhalb der MAIN()-Methode, keine Klassenvariable verwenden
 - [x] Sicherstellen, dass beim Zugriff auf die Daten die Arraygrenzen nicht verlassen werden.
 - [x] Erstellen eines Auswahlmenüs in der Methode MAIN() für den Zugriff auf die einzelnen Funktionen.
-- [ ] Beim Löschen, Ändern, Anzeigen und Auflisten darf nur auf Einträge zugefriffen werden für die Daten erfasst wurde.
+- [x] Beim Löschen, Ändern, Anzeigen und Auflisten darf nur auf Einträge zugefriffen werden für die Daten erfasst wurde.
 - [x] Erstellen der Methode: **Eingabe**
 - [x] Erstellen der Methode: **Löschen**
 - [x] Erstellen der Methode: **Ändern**
-- [ ] Erstellen der Methode: **Anzeigen**
-- [ ] Erstellen der Methode: **Auflisten**  
+- [x] Erstellen der Methode: **Anzeigen**
+- [x] Erstellen der Methode: **Auflisten**  
